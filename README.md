@@ -1,7 +1,10 @@
 ARD Mediathek Plugin für Enigma2
 
-ARD Mediathek - Version 1.1
+
+
+Version 1.1
+- Skin optimiert
 - fix for Openvix
 
-ARD Mediathek - Version 1.0
+Version 1.0
 - first version
