@@ -16,5 +16,5 @@
     <eLabel position="1260,1050" size="300,2" backgroundColor="yellow"/>
     <widget position="1260,998" size="300,45" name="key_yellow" halign="center" font="Regular; 42"/>
     <eLabel position="1590,1050" size="300,2" backgroundColor="blue"/>
-    <widget position="1590,998" size="300,45" name="key_blue" halign="center" font="Regular; 42"/>
+    <widget position="1590,998" size="300,45"  text="HOME" halign="center" font="Regular; 42"/>
 </screen>
