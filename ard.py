@@ -235,6 +235,8 @@ class ArdMediathek(Screen):
             liste.append(('WEITER', 'Videos', API_URL + 'widgets/%s/search/vod?searchString=%s&pageNumber=0&pageSize=200' % (self.PROGRAMM, cleanurl(self.searchtxt)), '', '', ''))
 
         for js in data2:
+            if js.get('type') in ('region_gridlist', 'external'):
+                continue
             duration = ''
             img = ''
             plot = ''
