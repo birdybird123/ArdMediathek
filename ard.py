@@ -80,7 +80,7 @@ class ArdMediathek(Screen):
     def __init__(self, session):
         self.skin = open(skin, 'r').read()
         Screen.__init__(self, session)
-        self['actions'] = ActionMap(['OkCancelActions', 'ColorActions', 'DirectionActions', 'ChannelSelectBaseActions'], {"red": self.close, 'up': self.up, 'down': self.down, 'left': self.left, 'right': self.right, 'nextBouquet': self.p_up, 'prevBouquet': self.p_down, 'ok': self.ok, 'cancel': self.exit}, -1)
+        self['actions'] = ActionMap(['OkCancelActions', 'ColorActions', 'DirectionActions', 'ChannelSelectBaseActions'], {"red": self.close, "blue": self.Home, 'up': self.up, 'down': self.down, 'left': self.left, 'right': self.right, 'nextBouquet': self.p_up, 'prevBouquet': self.p_down, 'ok': self.ok, 'cancel': self.exit}, -1)
         self['movielist'] = List()
         self['cover'] = Pixmap()
         self['handlung'] = ScrollLabel()
@@ -131,6 +131,10 @@ class ArdMediathek(Screen):
             else:
                 print('OK ELSE')
             self.HISTORY.append((url, Index))
+
+    def Home(self):
+        self.HISTORY = [('MENU', '')]
+        self.HauptMenu()
 
     def exit(self):
         if len(self.HISTORY) > 1:
